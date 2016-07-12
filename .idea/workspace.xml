@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdf4e004-6419-4f4a-abef-d9a9e9d9699e" name="Default" comment="" />
+    <list default="true" id="cdf4e004-6419-4f4a-abef-d9a9e9d9699e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/default/modules/test_api/src/Controller/QuickbloxController.php" afterPath="$PROJECT_DIR$/sites/default/modules/test_api/src/Controller/QuickbloxController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/default/modules/test_api/src/Controller/TestAPIController.php" afterPath="$PROJECT_DIR$/sites/default/modules/test_api/src/Controller/TestAPIController.php" />
+    </list>
     <ignored path="drupal812.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -39,8 +43,10 @@
         <entry file="file://$PROJECT_DIR$/sites/default/modules/test_api/src/Controller/TestAPIController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-              <folding />
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="e#123#165#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,8 +54,8 @@
       <file leaf-file-name="QuickbloxController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/default/modules/test_api/src/Controller/QuickbloxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -80,6 +86,7 @@
         <option value="$PROJECT_DIR$/quickblox/samples/webrtc-cordova/www/config.js" />
         <option value="$PROJECT_DIR$/quickblox/samples/webrtc/config.js" />
         <option value="$PROJECT_DIR$/sites/default/modules/test_api/src/Controller/TestAPIController.php" />
+        <option value="$PROJECT_DIR$/sites/default/modules/test_api/src/Controller/QuickbloxController.php" />
       </list>
     </option>
   </component>
@@ -323,7 +330,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83480000" />
+    <option name="totallyTimeSpent" value="83934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="752" extended-state="6" />
@@ -704,15 +711,17 @@
     <entry file="file://$PROJECT_DIR$/sites/default/modules/test_api/src/Controller/TestAPIController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-          <folding />
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#123#165#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/default/modules/test_api/src/Controller/QuickbloxController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
         </state>
       </provider>

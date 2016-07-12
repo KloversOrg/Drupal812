@@ -23,12 +23,17 @@ use Drupal\Core\Form\FormState;
 use Drupal\Core\Entity;
 use Drupal\user\Controller;
 
+
+use Drupal\test_api\Controller\QuickbloxController;
 /**
  * Controller routines for test_api routes.
  */
 class TestAPIController extends ControllerBase {
 
   public function __construct(){
+
+    $QB = new QuickbloxController();
+
      \Drupal::logger('hello world')->notice("__construct TestAPIController");
   }
 
