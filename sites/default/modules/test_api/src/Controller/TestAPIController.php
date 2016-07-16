@@ -8,31 +8,25 @@
 namespace Drupal\test_api\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
-
-
 use \Drupal\node\Entity\Node;
 use \Drupal\file\Entity\File;
-
 use \Drupal\user\Entity\User;
 use \Drupal\profile\Entity\Profile;
-
 use Drupal\Core\Form\FormState;
 use Drupal\Core\Entity;
 use Drupal\user\Controller;
-
-
 use Drupal\test_api\Controller\QuickbloxController;
+
 /**
  * Controller routines for test_api routes.
  */
 class TestAPIController extends ControllerBase {
 
   public function __construct(){
-
-    $QB = new QuickbloxController();
+//    $QB = new QuickbloxController();
+//    $QB->QB_Session();
 
      \Drupal::logger('hello world')->notice("__construct TestAPIController");
   }
@@ -52,20 +46,29 @@ class TestAPIController extends ControllerBase {
 
       $user = User::load($uid);
 
-      $arr_user = array();
-      $arr_user['name'] = $user->get('name')->getValue()[0]['value'];
-      $arr_user['mail'] = $user->get('mail')->getValue()[0]['value'];
+      if($user){
+        $arr_user = array();
+        $arr_user['name'] = $user->get('name')->getValue()[0]['value'];
+        $arr_user['mail'] = $user->get('mail')->getValue()[0]['value'];
 
-      try {
-        if(!empty($user->get('user_picture')->getValue()[0]['target_id'])){
+        try {
+          if(!empty($user->get('user_picture')->getValue()[0]['target_id'])){
             $file = file_load($user->get('user_picture')->getValue()[0]['target_id']);
             $arr_user['url_image'] = file_create_url($file->get('uri')->getValue()[0]['value']);
-        }else{
+          }else{
             $arr_user['url_image']="";
+          }
+        } catch (Exception $e) {
+          \Drupal::logger('test_api')->notice($e->getMessage());
         }
-      } catch (Exception $e) {
-        \Drupal::logger('test_api')->notice($e->getMessage());
+
+        return new JsonResponse( array( 'uid' => $uid, 'session_id' => $session_id, 'session_name' => $session_name,'user' => $arr_user ) );
+      }else{
+
+        return new JsonResponse( array( 'uid' => $uid, 'session_id' => $session_id, 'session_name' => $session_name,'user' => $arr_user ) );
       }
+
+
 
 
       // profile
@@ -83,8 +86,7 @@ class TestAPIController extends ControllerBase {
 
       // profile
 
-      return new JsonResponse( array( 'uid' => $uid, 'session_id' => $session_id, 'session_name' => $session_name,'user' => $arr_user ) );
-    }
+          }
     $response['data'] = 'user login';
     $response['method'] = 'POST';
 
